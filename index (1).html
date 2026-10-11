@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gopika A | ECE Student & Aspiring Software Developer</title>
+<meta name="description" content="Portfolio of Gopika A, Electronics and Communication Engineering student.">
+<style>
+:root{--bg:#fff;--bg2:#fdf2f6;--card:#fff;--text:#14203f;--muted:#4a5573;--pink:#c2255c;--pink-soft:#fde3ec;--navy:#0f1b3d;--line:#e6e9f2;--on-pink:#fff}
+:root[data-theme=dark]{--bg:#0b1226;--bg2:#101a33;--card:#142040;--text:#eef1fa;--muted:#b4bdd6;--pink:#ff8fb4;--pink-soft:#2a1d3a;--navy:#fff;--line:#25335a;--on-pink:#0b1226}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit}h1,h2,h3{line-height:1.2;margin:0 0 .6rem;color:var(--navy)}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}section{padding:72px 0}section:nth-of-type(even){background:var(--bg2)}
+.sec-title{font-size:clamp(1.6rem,3vw,2.1rem)}.sec-title::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--pink);margin-top:10px}
+.sub{color:var(--muted);max-width:680px;margin-bottom:32px}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;text-decoration:none;color:var(--navy)}.logo span{color:var(--pink)}
+.links{display:flex;gap:18px;align-items:center}.links a{text-decoration:none;font-size:.92rem;color:var(--muted)}.links a:hover{color:var(--pink)}
+.btn{display:inline-block;padding:11px 20px;border-radius:999px;border:2px solid var(--pink);background:var(--pink);color:var(--on-pink);font-weight:600;text-decoration:none;cursor:pointer;font-size:.95rem;font-family:inherit;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}.btn.ghost{background:transparent;color:var(--pink)}
+.icon-btn{background:none;border:1px solid var(--line);border-radius:50%;width:38px;height:38px;cursor:pointer;color:var(--text);font-size:1rem}
+#menu{display:none}
+.hero{padding:80px 0 72px;background:radial-gradient(circle at 80% 10%,var(--pink-soft),transparent 55%)}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.eyebrow{color:var(--pink);font-weight:700;letter-spacing:.08em;font-size:.85rem;text-transform:uppercase}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem)}.role{font-weight:600;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.photo{width:min(320px,80%);aspect-ratio:1;margin:auto;border-radius:50%;border:6px solid var(--pink);overflow:hidden;background:var(--pink-soft);display:grid;place-items:center;font-size:4rem;font-weight:800;color:var(--pink);animation:float 6s ease-in-out infinite}
+.photo img{width:100%;height:100%;object-fit:cover}
+@keyframes float{50%{transform:translateY(-8px)}}
+.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(15,27,61,.12)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chip{background:var(--pink-soft);color:var(--pink);border-radius:999px;padding:4px 12px;font-size:.82rem;font-weight:600}
+.chip.o{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.skill-ic{font-size:1.6rem}.skill-card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:.93rem}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.filters button{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font-family:inherit}
+.filters button[aria-pressed=true]{background:var(--pink);border-color:var(--pink);color:var(--on-pink)}
+.proj{display:flex;flex-direction:column;gap:10px}.proj h3{font-size:1.15rem}
+.badge{align-self:flex-start;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:6px;background:var(--navy);color:var(--bg)}
+.proj h4{margin:6px 0 2px;font-size:.85rem;color:var(--pink);text-transform:uppercase;letter-spacing:.05em}
+.proj p,.proj li{margin:0;color:var(--muted);font-size:.93rem}.proj ul{margin:0;padding-left:18px}
+.note{background:var(--pink-soft);border-left:4px solid var(--pink);padding:8px 12px;border-radius:6px;font-size:.88rem;color:var(--text)}
+.proj .acts{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;padding-top:8px}.proj .btn{padding:7px 14px;font-size:.85rem}
+.timeline{border-left:3px solid var(--pink);padding-left:22px;max-width:640px}
+.ph{color:var(--muted);font-style:italic}
+form{display:grid;gap:14px;max-width:620px}label{font-weight:600;font-size:.9rem}
+input,textarea{width:100%;padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.err{color:#c0392b;font-size:.82rem;min-height:1em}:root[data-theme=dark] .err{color:#ff9b8f}
+#status{font-weight:600}
+footer{padding:32px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.9rem}
+footer a{margin:0 8px}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr;text-align:center}.cta{justify-content:center}.hero .photo{order:-1;width:220px}
+#menu{display:inline-block}.links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px;border-bottom:1px solid var(--line)}.links.open{display:flex}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+<a class="logo" href="#home">Gopika<span>.A</span></a>
+<div class="links" id="links">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#achievements">Activities</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+<button class="icon-btn" id="theme" aria-label="Toggle light and dark mode">🌙</button></div>
+<button class="icon-btn" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+</div></nav>
+
+<header class="hero" id="home"><div class="wrap">
+<div>
+<p class="eyebrow">Hello, I'm</p>
+<h1>GOPIKA A</h1>
+<p class="role">Electronics and Communication Engineering Student | Aspiring Software Developer | Electronics Project Enthusiast</p>
+<p>I am an enthusiastic Electronics and Communication Engineering student with an interest in software development, programming, circuit design, and innovative technology solutions. I enjoy developing practical projects that connect electronics with software to solve real-world problems. I am continuously improving my technical knowledge, logical thinking, teamwork, and problem-solving skills.</p>
+<div class="cta">
+<a class="btn" href="#projects">Explore My Projects</a>
+<a class="btn ghost" href="#skills">View My Skills</a>
+<a class="btn ghost" href="resume.pdf" download>Download Resume</a>
+<a class="btn ghost" href="#contact">Contact Me</a></div>
+</div>
+<div class="photo" aria-label="Profile photo of Gopika A"><img src="profile.jpg" alt="Gopika A" onerror="this.remove();this.parentNode.textContent='GA'"></div>
+</div></header>
+
+<section id="about"><div class="wrap rv">
+<h2 class="sec-title">About Me</h2>
+<p class="sub">I am pursuing a B.E./B.Tech in Electronics and Communication Engineering (2025–2029), where I am building a base in analog electronics, circuits and signal processing alongside programming.</p>
+<p style="max-width:760px">My interests sit where hardware meets software: embedded systems with Arduino, sensor-based prototypes, web development with HTML, CSS, JavaScript and Flask, and programming in Java, Python and C. I enjoy turning ideas into working prototypes, learning new technologies, working in teams, taking part in technical events, and building useful solutions to real-world challenges.</p>
+<ul class="chips" id="qualities" style="margin-top:20px"></ul>
+</div></section>
+
+<section id="skills"><div class="wrap rv">
+<h2 class="sec-title">Technical Skills</h2>
+<p class="sub">Skills I am learning and applying through coursework and projects. No levels are shown because none have been formally verified.</p>
+<div class="grid g3" id="skillGrid"></div>
+</div></section>
+
+<section id="projects"><div class="wrap rv">
+<h2 class="sec-title">Featured Projects</h2>
+<p class="sub">Each project shows its real status. Links appear only when they are provided.</p>
+<div class="filters" id="filters" role="group" aria-label="Filter projects by category"></div>
+<div class="grid g3" id="projGrid"></div>
+</div></section>
+
+<section id="education"><div class="wrap rv">
+<h2 class="sec-title">Education</h2>
+<div class="timeline card">
+<h3>Electronics and Communication Engineering</h3>
+<p><strong>2025 – 2029</strong> · Department of Electronics and Communication Engineering</p>
+<p id="college" class="ph"></p>
+<p id="marks" class="ph"></p>
+</div>
+</div></section>
+
+<section id="interests"><div class="wrap rv">
+<h2 class="sec-title">Technical Interests</h2>
+<ul class="chips" id="interestList" style="margin-top:18px"></ul>
+</div></section>
+
+<section id="achievements"><div class="wrap rv">
+<h2 class="sec-title">Achievements & Activities</h2>
+<p class="sub">Add real entries in the <code>ACHIEVEMENTS</code> list in the script. Nothing is shown as earned until you add it.</p>
+<div class="grid g3" id="achGrid"></div>
+</div></section>
+
+<section id="resume"><div class="wrap rv">
+<h2 class="sec-title">Resume</h2>
+<div class="card" style="max-width:620px">
+<p>A concise, internship-ready resume covering education, projects, skills and activities.</p>
+<a class="btn" href="resume.pdf" download>Download Resume (PDF)</a>
+<p class="ph" style="font-size:.85rem">Place your file as <code>resume.pdf</code> next to this page.</p>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap rv">
+<h2 class="sec-title">Contact</h2>
+<p class="sub">Open to internships, hackathons and collaborations.</p>
+<ul class="chips" id="contactLinks" style="margin-bottom:26px"></ul>
+<form id="form" novalidate>
+<div><label for="n">Name</label><input id="n" name="name" autocomplete="name"><div class="err" data-for="n"></div></div>
+<div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email"><div class="err" data-for="e"></div></div>
+<div><label for="s">Subject</label><input id="s" name="subject"><div class="err" data-for="s"></div></div>
+<div><label for="m">Message</label><textarea id="m" name="message" rows="5"></textarea><div class="err" data-for="m"></div></div>
+<button class="btn" type="submit">Send Message</button>
+<p id="status" role="status" aria-live="polite"></p>
+</form>
+</div></section>
+
+<footer><div class="wrap">
+<div id="footLinks"></div>
+<p>© <span id="yr"></span> Gopika A. Built with HTML, CSS and JavaScript.</p>
+</div></footer>
+
+<script>
+/* ===== EDIT YOUR DETAILS HERE ===== */
+const CONFIG={
+ email:"",            // e.g. "you@example.com"
+ linkedin:"",         // full URL
+ github:"",           // full URL
+ college:"",          // e.g. "Your College Name"
+ marks:"",            // e.g. "CGPA: 8.5 (till semester 2)"
+ formEndpoint:""      // Formspree / Web3Forms URL. Leave empty until configured.
+};
+const QUALITIES=["Self-motivated learner","Positive attitude","Logical thinking","Problem-solving mindset","Teamwork and collaboration","Time management","Adaptability","Continuous learning"];
+const SKILLS=[
+ ["💻","Programming Languages","Core languages used for coursework and projects.",["Java","Python","C Programming"]],
+ ["🌐","Web Development","Building responsive pages and simple web apps.",["HTML","CSS","JavaScript","Responsive Web Design","Frontend Fundamentals","Flask Web Apps"]],
+ ["🛠️","Development Tools","Everyday tools for coding and simulation.",["Visual Studio Code","MATLAB","Git and GitHub","Basic command line"]],
+ ["📡","Electronics & ECE","Analog and sensor-based circuit work.",["Circuit Design Fundamentals","Analog Electronics","Op-Amps (LM358)","Sensors and Photodiodes","Arduino Fundamentals","Circuit Testing and Troubleshooting","Signal Processing Fundamentals","Hardware–Software Integration"]],
+ ["🧩","Software Development","Fundamentals of structured software work.",["OOP Fundamentals","Algorithmic Thinking","Basic Database Concepts","Backend Fundamentals","REST API Fundamentals","Debugging","Software Testing Fundamentals"]],
+ ["🎯","Project & Professional","Skills for taking an idea to a prototype.",["Problem Analysis","Design Thinking","Prototype Development","Technical Documentation","Presentation Skills","Team Collaboration","Research and Innovation"]]
+];
+/* status: Prototype | Proposed | In development | Completed ; github/demo: add URLs when ready */
+const PROJECTS=[
+{t:"Smart Product Safety Monitoring, Real-Time Expiry Detection & Authentication Government Alert System",cat:"Software",status:"Proposed",
+ over:"A product safety and traceability system to monitor expiry dates, verify product information and flag unsafe or unverified products in retail, with incident information for authorized government dashboards.",
+ prob:"Expired or unverified products can reach customers because checks at billing and inventory level are manual.",
+ sol:"QR/barcode identification with batch and expiry records, billing-time warnings and incident reporting.",
+ feats:["QR and barcode product identification","Batch, manufacturing and expiry tracking","Near-expiry notifications","Billing/POS expiry verification and blocking or warning","Authenticity check against available records","Inventory monitoring and customer QR verification","Safety incident reporting and government alerts"],
+ tech:["HTML","CSS","JavaScript","Java / Python","Database","QR scanning"],note:"Features listed are the design scope; update the status as parts get built.",github:"",demo:""},
+{t:"Skin Abnormalities Checking System",cat:"Electronics",status:"Prototype",
+ over:"An electronics project exploring detection of skin-related variations using optical sensing and analog signal processing.",
+ prob:"Simple, low-cost sensing methods for skin variation are worth exploring at the prototype level.",
+ sol:"A photodiode with red LED illumination, LM358 op-amp signal conditioning and LM35 temperature sensing.",
+ feats:["Optical sensing with a photodiode","Red LED illumination","Analog signal conditioning using LM358","Temperature sensing using LM35","Sensor signal monitoring","Hardware testing and circuit integration"],
+ tech:["LM358","Photodiode","LM35","Analog circuits"],note:"Experimental prototype only. It is not a clinically validated diagnostic device and does not diagnose skin diseases.",github:"",demo:""},
+{t:"Traffic Sign Detection System",cat:"Computer Vision",status:"In development",
+ over:"A web app that accepts a traffic sign image, processes it and displays a predicted sign category.",
+ prob:"Recognising road signs from images needs preprocessing and classification wrapped in an easy interface.",
+ sol:"OpenCV preprocessing and colour-based processing behind a Flask backend, with results shown on a web page.",
+ feats:["Image upload interface","Image preprocessing","Colour-based processing with OpenCV","Traffic sign classification","Python backend integration","Result display on a web page"],
+ tech:["Python","OpenCV","Flask","HTML","CSS"],note:"A trained classification model will be listed once successfully integrated.",github:"",demo:""},
+{t:"Hospital Resource Allocation Recommendation System",cat:"Decision Support",status:"Proposed",
+ over:"A proposed solution to help hospitals respond to sudden patient surges by spotting resource shortages and recommending allocations.",
+ prob:"During surges, beds and resources run short and allocation decisions are slow.",
+ sol:"A dashboard tracking availability and suggesting priority-based allocations.",
+ feats:["Patient surge monitoring","Bed and resource availability tracking","Shortage identification","Priority-based allocation recommendations","Hospital dashboard","Resource status reports"],
+ tech:["Java","HTML","CSS","JavaScript","Database (if implemented)"],note:"Proposed hackathon concept; no working implementation is claimed.",github:"",demo:""},
+{t:"Area-Specific Shelter Design Recommendation System",cat:"Decision Support",status:"Proposed",
+ over:"A proposed Java tool that takes location and environmental inputs and suggests shelter designs for thermal comfort.",
+ prob:"Shelter designs that ignore local climate can be uncomfortable and inefficient.",
+ sol:"Basic thermal comfort calculations from temperature, humidity, wind and sunlight inputs, with design recommendations.",
+ feats:["Location and environment input","Temperature and humidity entry","Wind and sunlight considerations","Basic thermal comfort calculations","Shelter design recommendations","Results dashboard"],
+ tech:["Java","HTML","CSS","JavaScript"],note:"Proposed concept; environmental data integration only if implemented.",github:"",demo:""},
+{t:"Women's Safety and Emergency Assistance System",cat:"Software",status:"Proposed",
+ over:"A proposed safety application concept offering emergency assistance features and access to safety information.",
+ prob:"People in unsafe situations need fast, simple ways to call for help and share their location.",
+ sol:"A mobile-friendly web interface with SOS, contacts and permission-based location sharing.",
+ feats:["Emergency SOS interface","Emergency contact management","Location sharing with user permission","Safe-route information integration","Emergency alert status","Responsive mobile-friendly interface"],
+ tech:["HTML","CSS","JavaScript","Maps/Location APIs"],note:"All features listed are possible features of the concept, not completed functionality.",github:"",demo:""}
+];
+const INTERESTS=["Java programming","Python development","Web application development","Embedded systems","Sensors and electronic circuits","Computer vision","Product safety technology","Healthcare software solutions","Innovative problem-solving","Design thinking and prototyping"];
+/* Add real entries: {type:"Hackathon",title:"...",detail:"...",link:""} */
+const ACHIEVEMENTS=[];
+const SLOTS=["Hackathons","Project Reviews","Workshops","Certifications","Technical Events"];
+/* ================================== */
+
+const $=s=>document.querySelector(s),el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!==undefined)e.innerHTML=h;return e};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const root=document.documentElement;
+try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t;else if(matchMedia("(prefers-color-scheme: dark)").matches)root.dataset.theme="dark"}catch(e){}
+const tb=$("#theme");const syncTheme=()=>tb.textContent=root.dataset.theme==="dark"?"☀️":"🌙";syncTheme();
+tb.onclick=()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}syncTheme()};
+$("#menu").onclick=function(){const o=$("#links").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+$("#links").addEventListener("click",e=>{if(e.target.tagName==="A")$("#links").classList.remove("open")});
+
+QUALITIES.forEach(q=>$("#qualities").append(el("li","chip",esc(q))));
+INTERESTS.forEach(q=>$("#interestList").append(el("li","chip o",esc(q))));
+SKILLS.forEach(([ic,t,d,items])=>$("#skillGrid").append(el("div","card skill-card",`<div class="skill-ic" aria-hidden="true">${ic}</div><h3>${esc(t)}</h3><p style="color:var(--muted);margin:0;font-size:.93rem">${esc(d)}</p><ul>${items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>`)));
+
+const cats=["All",...new Set(PROJECTS.map(p=>p.cat))];
+function drawProjects(f){
+ $("#projGrid").innerHTML="";
+ PROJECTS.filter(p=>f==="All"||p.cat===f).forEach(p=>{
+  const link=(u,l,g)=>u?`<a class="btn ${g?"ghost":""}" href="${esc(u)}" target="_blank" rel="noopener">${l}</a>`:"";
+  $("#projGrid").append(el("article","card proj",`<span class="badge">${esc(p.status)}</span><h3>${esc(p.t)}</h3>
+  <p><strong>${esc(p.cat)}</strong></p><p>${esc(p.over)}</p>
+  <h4>Problem</h4><p>${esc(p.prob)}</p><h4>Solution</h4><p>${esc(p.sol)}</p>
+  <h4>Key features</h4><ul>${p.feats.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+  <ul class="chips" style="margin-top:6px">${p.tech.map(x=>`<li class="chip">${esc(x)}</li>`).join("")}</ul>
+  <div class="note">${esc(p.note)}</div>
+  <div class="acts">${link(p.github,"GitHub Repository")}${link(p.demo,"Live Demo",1)}${!p.github&&!p.demo?'<span class="ph" style="font-size:.85rem">Links coming soon</span>':""}</div>`));
+ });
+}
+cats.forEach(c=>{const b=el("button","",esc(c));b.setAttribute("aria-pressed",c==="All");b.onclick=()=>{document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));drawProjects(c)};$("#filters").append(b)});
+drawProjects("All");
+
+$("#college").textContent=CONFIG.college||"[Add your college name]";
+$("#marks").textContent=CONFIG.marks||"[Add marks / CGPA if you wish]";
+if(CONFIG.college)$("#college").classList.remove("ph");if(CONFIG.marks)$("#marks").classList.remove("ph");
+if(ACHIEVEMENTS.length)ACHIEVEMENTS.forEach(a=>$("#achGrid").append(el("div","card",`<span class="chip">${esc(a.type)}</span><h3 style="margin-top:10px">${esc(a.title)}</h3><p style="color:var(--muted)">${esc(a.detail||"")}</p>${a.link?`<a href="${esc(a.link)}" target="_blank" rel="noopener">View certificate</a>`:""}`)));
+else SLOTS.forEach(s=>$("#achGrid").append(el("div","card",`<h3>${s}</h3><p class="ph">[Add your ${s.toLowerCase()} here]</p>`)));
+
+const links=[["Email",CONFIG.email&&"mailto:"+CONFIG.email],["LinkedIn",CONFIG.linkedin],["GitHub",CONFIG.github]];
+links.forEach(([l,u])=>$("#contactLinks").append(el("li","chip"+(u?"":" o"),u?`<a href="${esc(u)}" ${l!=="Email"?'target="_blank" rel="noopener"':""} style="text-decoration:none">${l}</a>`:`${l}: [Add your ${l}]`)));
+links.filter(l=>l[1]).forEach(([l,u])=>$("#footLinks").append(el("a","",`<a href="${esc(u)}" ${l!=="Email"?'target="_blank" rel="noopener"':""}>${l}</a>`).firstChild));
+$("#yr").textContent=new Date().getFullYear();
+
+$("#form").addEventListener("submit",async ev=>{
+ ev.preventDefault();const f=ev.target,st=$("#status");let ok=true;
+ const rules={n:v=>v.trim().length>=2||"Please enter your name.",e:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)||"Enter a valid email.",s:v=>v.trim().length>=3||"Please add a subject.",m:v=>v.trim().length>=10||"Message should be at least 10 characters."};
+ for(const k in rules){const r=rules[k]($("#"+k).value);document.querySelector(`[data-for=${k}]`).textContent=r===true?"":r;if(r!==true)ok=false}
+ if(!ok){st.textContent="Please fix the highlighted fields.";return}
+ if(!CONFIG.formEndpoint){st.innerHTML="The form is not connected to an email service yet, so this message was not sent."+(CONFIG.email?` Please email <a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a> directly.`:"");return}
+ try{st.textContent="Sending…";const r=await fetch(CONFIG.formEndpoint,{method:"POST",headers:{Accept:"application/json"},body:new FormData(f)});
+  if(r.ok){st.textContent="Thanks! Your message was sent.";f.reset()}else throw 0}catch(e){st.textContent="Sorry, sending failed. Please try again or email directly."}
+});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach(n=>io.observe(n));
+</script>
+</body>
+</html>
